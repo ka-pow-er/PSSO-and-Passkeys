@@ -1,9 +1,9 @@
 # PSSO-and-Passkeys
-This is a "recipe" for the automated workflow I use to deploy passkeys in my environment, consisting of Jamf Pro (cloud) and Entra ID. It is assumed your Jamf instance is integrated with Entra ID to supply compliance info and that you are using the SSO extension.
+This is a "recipe" for the automated workflow I used to deploy passkeys to all the Macs in my environment, consisting of Jamf Pro (cloud) and Entra ID. It is assumed your Jamf instance is integrated with Entra ID to supply compliance info and that you are using the SSO extension.
 
 The recipe needs to include names for extension attributes and smart groups, which of course, you are free to change to meet the needs of your environment.
 
-The workflow includes a restart, which I and top Mac experts smarter than me, consider essential. Some would argue that the workflow "works" without a restart, and frankly it does seemingly all of the time, but you are taking a risk that impacts every Mac you manage. The Platform SSO configuration profile determines both SSO and compliance - two mission-critical aspects of your Entra ID Environment. Do you really want to gamble with your colleagues' workdays and risk future problems? Besides, the workflow makes use of a Swift Dialog message, explaining the need to restart and allowing the user the ability to close open sessions and documents.
+The workflow includes a restart, which I and top Mac experts smarter than me, consider mandatory for macOS 15 Sequoia and essential for macOS 26 Tahoe and higher. Some would argue that the workflow "works" without a restart, and frankly it does seemingly all of the time, but you are taking a risk that impacts every Mac you manage. The Platform SSO configuration profile determines both SSO and compliance - two mission-critical aspects of your Entra ID Environment. Do you really want to gamble with your colleagues' workdays and risk future problems? Besides, the workflow makes use of a Swift Dialog message, explaining the need to restart and allowing the user the ability to close open sessions and documents.
 
 What the user sees: 
      1) a Swift Dialog message, explaining the need to restart, 
